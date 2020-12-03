@@ -1,13 +1,13 @@
-import { Comment } from './comment.class'
+import { Comment } from "./comment.class";
 
 export class Dish {
-    id: string;
-    name: string;
-    image: string;
-    category: string;
-    featured: boolean;
-    label: string;
-    price: string;
-    description: string;
-    comments: Comment[];
+  id: string;
+  name: string;
+  image: string;
+  category: string;
+  featured: boolean;
+  label: string;
+  price: string;
+  description: string;
+  comments: Comment[];
 }

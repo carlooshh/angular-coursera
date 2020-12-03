@@ -1,15 +1,22 @@
-import { Injectable } from '@angular/core';
-import { Dish } from '../shared/dish.class';
-import { DISHES } from '../shared/dishes';
+import { Injectable } from "@angular/core";
+import { Dish } from "../shared/dish.class";
+import { DISHES } from "../shared/dishes";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root",
 })
 export class DishService {
-
-  constructor() { }
+  constructor() {}
 
   getDishes(): Dish[] {
     return DISHES;
+  }
+
+  getDish(id: string): Dish {
+    return DISHES[parseInt(id)];
+  }
+
+  getFeaturedDish(): Dish {
+    return DISHES.filter((dish) => dish.featured)[0];
   }
 }
