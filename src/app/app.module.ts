@@ -15,6 +15,7 @@ import { ReactiveFormsModule } from "@angular/forms";
 import { MatSelectModule } from "@angular/material/select";
 import { MatSlideToggleModule } from "@angular/material/slide-toggle";
 import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
+import { MatSliderModule } from "@angular/material/slider";
 
 import { AppComponent } from "./app.component";
 
@@ -32,6 +33,9 @@ import { PromotionService } from "./services/promotion.service";
 import { LeaderService } from "./services/leader.service";
 
 import { AppRoutingModule } from "./app-routing/app-routing.module";
+import { HttpModule } from "@angular/http";
+import { HttpClientModule } from "@angular/common/http";
+import { baseURL } from "./shared/baseurl";
 import { LoginComponent } from "./login/login.component";
 
 @NgModule({
@@ -53,6 +57,8 @@ import { LoginComponent } from "./login/login.component";
     FlexLayoutModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpModule,
+    HttpClientModule,
     MatToolbarModule,
     MatListModule,
     MatGridListModule,
@@ -64,9 +70,18 @@ import { LoginComponent } from "./login/login.component";
     MatSelectModule,
     MatSlideToggleModule,
     MatProgressSpinnerModule,
+    MatSliderModule,
   ],
   entryComponents: [LoginComponent],
-  providers: [DishService, PromotionService, LeaderService],
+  providers: [
+    DishService,
+    PromotionService,
+    LeaderService,
+    {
+      provide: "BaseURL",
+      useValue: baseURL,
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
