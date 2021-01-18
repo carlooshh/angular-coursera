@@ -57,7 +57,7 @@ export function expand() {
     state(
       "*",
       style({
-        transform: "transleteX(0)",
+        transform: "translateX(0)",
         opacity: 1,
       })
     ),
@@ -66,7 +66,7 @@ export function expand() {
       animate(
         "200ms ease-in",
         style({
-          transform: "transleteX(0)",
+          transform: "translateX(0)",
           opacity: 1,
         })
       ),

@@ -1,7 +1,6 @@
 import { Injectable } from "@angular/core";
 import { Dish } from "../shared/dish.class";
-import { from, Observable, of } from "rxjs";
-import { delay } from "rxjs/operators";
+import { Observable } from "rxjs";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { baseURL } from "../shared/baseurl";
 import { map, catchError } from "rxjs/operators";
@@ -30,7 +29,7 @@ export class DishService {
 
   getFeaturedDish(): Observable<Dish> {
     return this.http
-      .get<Dish>(baseURL + "dishes/featured?=true")
+      .get<Dish>(baseURL + "dishes?featured=true")
       .pipe(map((dishes) => dishes[0]))
       .pipe(catchError(this.processHTTPMsgService.handleError));
   }
