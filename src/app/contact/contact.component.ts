@@ -143,8 +143,4 @@ export class ContactComponent implements OnInit {
     });
     this.feedbackFormDirective.resetForm();
   }
-
-  test() {
-    console.log("SImple analisys tests on sonarclound.");
-  }
 }
