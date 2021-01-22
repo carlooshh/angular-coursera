@@ -143,7 +143,8 @@ export class ContactComponent implements OnInit {
     });
     this.feedbackFormDirective.resetForm();
   }
-  test() {
-    console.log("Test.aa");
+
+  helloWorld() {
+    console.log("hello world.");
   }
 }
