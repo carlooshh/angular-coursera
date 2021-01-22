@@ -145,6 +145,7 @@ export class ContactComponent implements OnInit {
   }
 
   helloWorld() {
-    console.log("hello world.");
+    let crypto = Math.random();
+    console.log(crypto);
   }
 }
