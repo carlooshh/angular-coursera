@@ -144,6 +144,6 @@ export class ContactComponent implements OnInit {
     this.feedbackFormDirective.resetForm();
   }
   test() {
-    console.log("Test.");
+    console.log("Test.aa");
   }
 }
