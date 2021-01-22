@@ -143,8 +143,7 @@ export class ContactComponent implements OnInit {
     });
     this.feedbackFormDirective.resetForm();
   }
-
   test() {
-    console.log("it should call the sonar analyze.");
+    console.log("Test.");
   }
 }
