@@ -143,9 +143,4 @@ export class ContactComponent implements OnInit {
     });
     this.feedbackFormDirective.resetForm();
   }
-
-  helloWorld() {
-    let crypto = Math.random();
-    console.log(crypto);
-  }
 }

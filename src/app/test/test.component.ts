@@ -9,9 +9,4 @@ export class TestComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {}
-
-  helloWorld() {
-    let crypto = Math.random();
-    console.log(crypto);
-  }
 }
